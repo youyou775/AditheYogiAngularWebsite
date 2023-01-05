@@ -1,0 +1,73 @@
+//adding screen sizes
+$desktop: 960px;
+$tablet: 768px;
+$mobile-large: 640px;
+$mobile: 480px;
+$mobile-small: 340px;
+//css
+.bg {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0) 30%,
+            rgba(255, 255, 255, 0.8) 45%,
+            rgba(255, 255, 255, 0.85) 100%
+        ),
+        url(../../assets/Schedule.jpg) no-repeat center;
+    background-size: cover;
+
+}
+
+.description {
+    padding: 5px;
+    text-align: left;
+    color: #859EAC;
+
+    font-family: "century-gothic";
+    font-size: 24px;
+    ul {
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+
+        #title {
+            font-family: "oswald";
+            font-size: 30px;
+            margin: 0px 0px 0px 0px;
+            text-align: center;
+            color: #859EAC;
+        }
+        #subtitle {
+            font-family: "oswald";
+            font-size: 25px;
+            margin: 0px 0px 0px 0px;
+            text-align: center;
+            color: #859EAC;
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        li {
+            width: 100%;
+            display: flex;
+            margin: 5px;
+            align-items: baseline;
+            // justify-content: center;
+            justify-content: space-around;
+            p {
+                margin-right: 5px;
+                font-family: "century-gothic";
+                font-size: 16px;
+            }
+            a {
+                background-color: #859EAC;
+                border-radius: 10px;
+                color: white;
+                padding: 15px;
+                text-decoration: none;
+                font-size: 12px;
+            }
+        }
+    }
+}

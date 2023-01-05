@@ -1,0 +1,121 @@
+<div class="description">
+    <div *ngIf="!submitted">
+        <p id="title">RETREAT DETAILS</p>
+        <p id="details">
+            <b>Location:</b> Ananda Beach Camp.<br>
+            <b>Date:</b> 21st -24th Oct (4 Days 3 nights).<br><br>
+
+            <b>Facilities:</b> ACs, Private Bathrooms, fridge/Minibar, Pets allowed.<br>
+            <b>Food:</b> Breakfast/Dinner are included<br><br>
+
+            <b>Included in program:</b><br>
+            -Sunrise and Sunset Yoga sessions everyday.<br>
+            -Talks about meditation and pranayama(breathing techniques).<br>
+            -Open discussions and sharing stories (campfire talks).<br>
+            -Talks about food, nutrition, self care.<br>
+            -Extra Activities and trips.<br><br>
+            <b>Leaving Time:</b> We meet and take the bus to Nweibaa from Tahrir square.<br>
+
+            <b>Fees include:</b> Transportation, HalfBoard Meals, Camp stay, All sessions.<br>
+            <b>fees don't include:</b> extra trips during the retreat.(WeshWashy...etc).<br><br>
+
+            **You will find the Price and Payement options Below**
+        </p>
+        <form (ngSubmit)="retreatForm.form.valid && submitted = true;sendDataToServer();" #retreatForm="ngForm" novalidate>
+
+            <input #name="ngModel" name="name" placeholder="Your Name" type="text" [(ngModel)]="model.name"
+                required><br>
+            <div *ngIf="retreatForm.submitted && name.invalid" class="invalid-feedback">
+                <div *ngIf="name.errors?.required">*Name is required</div>
+            </div>
+            <input #mail="ngModel" name="mail" placeholder="Your Email" type="text" [(ngModel)]="model.mail"
+                required><br>
+            <div *ngIf="retreatForm.submitted && mail.invalid" class="invalid-feedback">
+                <div *ngIf="mail.errors?.required">*Mail is required</div>
+            </div>
+            <input #phone="ngModel" name="phone" placeholder="Your Phonenumber" type="text" id="phone-input"
+                [(ngModel)]="model.phone" required><br>
+            <div *ngIf="retreatForm.submitted && phone.invalid" class="invalid-feedback">
+                <div *ngIf="phone.errors?.required">*Phone is required</div>
+            </div>
+
+            <p><b>Are you Coming With Your Car ?</b></p>
+            <input type="radio" id="yes" name="yes" [value]="1" [(ngModel)]="model.car">
+            <label for="yes">Yes</label><br>
+            <input type="radio" id="no" name="no" [value]="0" [(ngModel)]="model.car">
+            <label for="no">No</label><br>
+            <div *ngIf="retreatForm.submitted && model.car == undefined" class="invalid-feedback">
+                <div *ngIf="phone.errors?.required">*Please Answer The Question</div>
+            </div>
+            <p id="details">
+                *Also have special Discounts for our old students and groups*<br>
+
+                <b>Payement Methods:</b><br>
+                - In person <br>
+                - Bank transfer via CIB / QNB<br>
+
+                <b>You can reach me at:</b> <br>
+
+                -Calls 01005013894<br>
+                -Whatsapp 01157554634<br>
+            </p>
+
+            <p><b>Choose Your Accomodation:</b></p>
+            <div id="accomodation-container">
+
+                <div class="accomodation-column"
+                    [ngStyle]="{'border': itemSelected == 0 ? '2px solid #859EAC': 'hidden'}">
+                    <p class="accomodation-name"><b>Panoramic Bungalow</b></p>
+                    <img src="../../assets/Bungalow.jpg" alt="">
+                    <b>Facilities:</b> ACs, Private Bathrooms, fridge/Minibar, Pets allowed.<br><br>
+                    <div class="radio-container">
+                        <input type="radio" id="bungalowSingle" name="bungalowSingle" [value]="'bungalowSingle'"
+                            [(ngModel)]="model.accomodation" (change)="itemSelected =0;">
+                        <label for="bungalowSingle">Single - 2750 EGP</label><br>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="bungalowDouble" name="bungalowDouble" [value]="'bungalowDouble'"
+                            [(ngModel)]="model.accomodation" (change)="itemSelected =0;">
+                        <label for="bungalowDouble">Double - 2400 EGP</label><br>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="bungalowTriple" name="bungalowTriple" [value]="'bungalowTriple'"
+                            [(ngModel)]="model.accomodation" (change)="itemSelected =0;">
+                        <label for="bungalowTriple">Triple - 2250 EGP</label><br>
+                    </div>
+                </div>
+                <div class="accomodation-column"
+                    [ngStyle]="{'border': itemSelected == 1 ? '2px solid #859EAC': 'hidden'}">
+                    <p class="accomodation-name"><b>Hut</b></p>
+                    <img src="../../assets/Hut.jpg" alt="">
+                    <b>Facilities:</b> ACs, Private Bathrooms, fridge/Minibar, Pets allowed.<br><br>
+                    <div class="radio-container">
+                        <input type="radio" id="hutSingle" name="hutSingle" [value]="'hutSingle'"
+                            [(ngModel)]="model.accomodation" (change)="itemSelected =1;">
+                        <label for="hutSingle">Single - 2650 EGP</label><br>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="hutDouble" name="hutDouble" [value]="'hutDouble'"
+                            [(ngModel)]="model.accomodation" (change)="itemSelected =1;">
+                        <label for="hutDouble">Double - 2350 EGP</label><br>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="retreatForm.submitted && model.accomodation == undefined" class="invalid-feedback">
+                <div *ngIf="phone.errors?.required">*Please Choose your Accomodation</div>
+            </div>
+            <div *ngIf="retreatForm.submitted && retreatForm.invalid" class="invalid-feedback">
+                *Please Fix the Errors Above
+            </div>
+            <button class="form-button">Submit</button>
+        </form>
+
+    </div>
+    <div *ngIf="submitted">
+        <p id="title">Thank You For Applying</p>
+        <p id="details">We will get back to you shortly to confirm you registration/payement</p>
+    </div>
+
+
+
+</div>

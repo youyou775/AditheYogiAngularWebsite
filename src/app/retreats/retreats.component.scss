@@ -1,0 +1,88 @@
+//adding screen sizes
+$desktop: 960px;
+$tablet: 768px;
+$mobile-large: 640px;
+$mobile: 480px;
+$mobile-small: 340px;
+//css
+.description {
+    padding: 5px 10px 5px 10px;
+    text-align: left;
+    color: #859EAC;
+
+    font-family: "century-gothic";
+    font-size: 12px;
+    .invalid-feedback{
+        margin-top: 5px;
+        color: rgb(201, 1, 1);
+        font-size: 10px;
+    }
+
+    // #title {
+    //     font-family: "oswald";
+    //     font-size: 30px;
+    //     margin: 0px 0px 0px 0px;
+    //     text-align: center;
+    //     color: #859EAC;
+    // }
+    #details {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 10px;
+    }
+
+    button {
+        border: hidden;
+        background-color: #859EAC;
+        border-radius: 10px;
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+        font-size: 12px;
+        margin: 20px 10px 20px 10px;
+    }
+    #accomodation-container {
+        display: flex;
+        .accomodation-column {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            padding: 5px;
+            margin: 5px;
+            display: flex;
+            flex-direction: column;
+            &:focus { 
+                border: solid 1px #859EAC;
+            }
+            .accomodation-name {
+                text-align: center;
+            }
+            img {
+                margin-bottom: 10px;
+                max-width: 100%;
+            }
+            // .radio-container {
+            //     margin-top: 10px;
+            // }
+        }
+    }
+    ul {
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        li {
+            width: 100%;
+            display: flex;
+            margin: 5px;
+            align-items: baseline;
+            justify-content: center;
+            p {
+                margin-right: 5px;
+                font-family: "segoe-script";
+                font-size: 16px;
+            }
+        }
+    }
+}

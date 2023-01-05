@@ -1,0 +1,167 @@
+/* You can add global styles to this file, and also import other style files */
+//adding fonts
+@font-face {
+    font-family: segoe-script;
+    src: url(assets/fonts/segoesc.ttf) format("opentype");
+}
+@font-face {
+    font-family: century-gothic;
+    src: url(assets/fonts/GOTHIC.TTF) format("opentype");
+}
+@font-face {
+    font-family: oswald;
+    src: url(assets/fonts/Oswald-Regular.ttf) format("opentype");
+}
+@font-face {
+    font-family: verdaana;
+    src: url(assets/fonts/verdana.ttf) format("opentype");
+}
+
+//styles
+//background image
+body {
+    // width: 100vw;
+    // height: 100vh;
+    // background: linear-gradient(
+    //         90deg,
+    //         rgba(255, 255, 255, 0) 30%,
+    //         rgba(255, 255, 255, 0.8) 45%,
+    //         rgba(255, 255, 255, 0.85) 100%
+    //     ),
+    //     url(assets/Home.jpg) no-repeat center;
+    // -moz-background-size: cover;
+    // -o-background-size: cover;
+    // background-size: cover;
+}
+html,
+body {
+    margin: 0;
+}
+//custom scroll bar
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    // background: #3f7372;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+//global styles
+
+//manage page parts: side nav and website body
+.page-content {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+}
+// .writing-space {
+//     margin-top: 30px;
+
+// margin-right: 20px;
+// display: flex;
+// flex-direction: column;
+// align-items: flex-end;
+// .description-container {
+//     width: 600px;
+//     height: 90vh;
+
+.description {
+    width: 600px;
+    overflow-y: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    // background-color: rgba(255, 255, 255, 0.5);
+    #title {
+        font-family: "oswald";
+        font-size: 35px;
+        margin: 0px 0px 0px 0px;
+        text-align: center;
+        color: #859eac;
+    }
+}
+// }
+// }
+input {
+    // border-radius: 4px;
+    border: none;
+    padding: 5px;
+    margin-top: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #9bacba;
+}
+input[type="radio"]:after {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    // top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+input[type="radio"]:checked:after {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    // top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #859eac;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+//sizing for phones
+//adding screen sizes
+$desktop: 960px;
+$tablet: 768px;
+$mobile-large: 640px;
+$mobile: 480px;
+$mobile-small: 340px;
+
+@media only screen and (max-width: $tablet) {
+    body {
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.6) 15%,
+                rgba(255, 255, 255, 0.75) 100%
+            ),
+            url(assets/HomePhone.jpg) no-repeat center center fixed;
+    }
+    // html {
+    //     //background image
+    //     background: linear-gradient(90deg, rgba(242, 242, 242, 0) 22%, rgba(255, 255, 255, 0.72) 100%),
+    //         url(assets/background_desktop-02.jpg) no-repeat center center fixed;
+    // }
+    .writing-space {
+        margin-right: 0px;
+        .description-container {
+            width: 80vw;
+            height: 75vh;
+            overflow: auto;
+            margin-top: 20px;
+        }
+    }
+}
