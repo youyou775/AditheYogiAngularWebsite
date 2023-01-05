@@ -5,6 +5,18 @@ $mobile-large: 640px;
 $mobile: 480px;
 $mobile-small: 340px;
 //css
+.bg {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0) 30%,
+            rgba(255, 255, 255, 0.8) 45%,
+            rgba(255, 255, 255, 0.85) 100%
+        ),
+        url(../../assets/Contact.jpg) no-repeat center;
+    background-size: cover;
+}
 .description {
     padding: 5px 10px 5px 10px;
     text-align: left;
