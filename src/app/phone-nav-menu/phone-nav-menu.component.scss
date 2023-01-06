@@ -1,0 +1,22 @@
+.phone-nav-menu {
+    // background-color: rgba(255, 255, 255, 0.35);
+    padding: 7px;
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    .logo-container {
+        #logo-image {
+            height: 40px;
+            max-width: 100%;
+        }
+    }
+    .nav-container {
+        border: none;
+        background-color: transparent;
+        #nav-image {
+            height: 25px;
+
+            max-width: 100%;
+        }
+    }
+}

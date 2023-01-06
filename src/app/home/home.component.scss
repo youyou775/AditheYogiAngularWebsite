@@ -1,13 +1,5 @@
-//adding screen sizes
-$desktop: 960px;
-$tablet: 768px;
-$mobile-large: 640px;
-$mobile: 480px;
-$mobile-small: 340px;
 //css
 .bg {
-    width: 100vw;
-    height: 100vh;
     background: linear-gradient(
             90deg,
             rgba(255, 255, 255, 0) 30%,
@@ -18,14 +10,13 @@ $mobile-small: 340px;
     background-size: cover;
 }
 .description {
-    // height: 100%;
-  
     #buttons {
         width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        font-family: "oswald";
         a {
             text-decoration: none;
             color: #859eac;
@@ -40,5 +31,11 @@ $mobile-small: 340px;
         a:hover {
             color: #3f7372;
         }
+    }
+}
+@media only screen and (max-width: 768px) {
+    .bg {
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.7) 30%, rgba(255, 255, 255, 0.85) 100%),
+            url(../../assets/HomePhone.jpg) no-repeat center;
     }
 }

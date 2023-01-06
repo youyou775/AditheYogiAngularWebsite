@@ -1,0 +1,8 @@
+<div class="menu-body" *ngIf="menuOn">
+    <ul class="phone-nav">
+        <li [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active"><a (click)="menuOn = !menuOn" routerLink="/">HOME</a></li>
+        <li routerLinkActive="active"><a (click)="menuOn = !menuOn" routerLink="/schedule">SCHEDULE</a></li>
+        <li routerLinkActive="active"><a (click)="menuOn = !menuOn" routerLink="/about">ABOUT</a></li>
+        <li routerLinkActive="active"><a (click)="menuOn = !menuOn" routerLink="/contact">CONTACT</a></li>
+    </ul>
+</div>

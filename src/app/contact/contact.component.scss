@@ -1,13 +1,5 @@
-//adding screen sizes
-$desktop: 960px;
-$tablet: 768px;
-$mobile-large: 640px;
-$mobile: 480px;
-$mobile-small: 370px;
 //css
 .bg {
-    width: 100vw;
-    height: 100vh;
     background: linear-gradient(
             90deg,
             rgba(255, 255, 255, 0) 30%,
@@ -18,11 +10,6 @@ $mobile-small: 370px;
     background-size: cover;
 }
 .description {
-    padding: 10px;
-    text-align: left;
-    color: #859eac;
-
-    font-family: "century-gothic";
     font-size: 18px;
     ul {
         li {
@@ -41,8 +28,13 @@ $mobile-small: 370px;
         }
     }
 }
-@media only screen and (max-width: $mobile) {
+@media only screen and (max-width: 768px) {
     .description {
         font-size: 16px;
+    }
+
+    .bg {
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.7) 30%, rgba(255, 255, 255, 0.85) 100%),
+            url(../../assets/ContactPhone.jpg) no-repeat center;
     }
 }

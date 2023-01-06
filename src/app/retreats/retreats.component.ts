@@ -7,6 +7,7 @@ import { RestAPIService } from '../services/rest-api.service';
   styleUrls: ['./retreats.component.scss']
 })
 export class RetreatsComponent implements OnInit {
+  menuOn = false;
   itemSelected!: number;
   submitted: boolean = false;
 

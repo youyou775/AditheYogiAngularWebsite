@@ -1,5 +1,7 @@
 <div class="bg">
-    <div class="page-content">
+    <app-phone-nav-menu (menuOn)="menuOn =$event"></app-phone-nav-menu>
+
+    <div class="page-content" *ngIf="!menuOn">
         <div class="description">
             <p id="title">CONTACT</p>
             <ul>
@@ -20,4 +22,6 @@
         </div>
         <app-side-nav> </app-side-nav>
     </div>
+    <app-phone-nav-menu-body [menuOn]="menuOn"></app-phone-nav-menu-body>
+
 </div>

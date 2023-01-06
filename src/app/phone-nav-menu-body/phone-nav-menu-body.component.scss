@@ -1,0 +1,35 @@
+.menu-body {
+    width: 100vw;
+    height: 80vh;
+    background-color: rgba(255, 255, 255, 0.35);
+    display: flex;
+    justify-content: center;
+
+    .phone-nav {
+        // height: 100%;
+        // width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        li {
+            list-style: none;
+            padding-right: 50px;
+            a {
+                text-decoration: none;
+                font-family: "verdana";
+                font-size: 30px;
+                color: #859eac;
+            }
+            a:hover {
+                color: #9fb4b3;
+            }
+        }
+        .active {
+            a {
+                color: #2a5252;
+            }
+        }
+    }
+}
